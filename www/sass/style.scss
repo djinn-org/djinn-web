@@ -1,0 +1,29 @@
+// main style scss
+
+html, body, main {
+  height: 100%;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+$font-stack:    'Roboto', sans-serif;
+$font-size:     16px;
+
+* {
+  box-sizing: border-box;
+  outline: none;
+}
+
+.clearfix {
+  overflow: auto;
+}
+
+@import 'import/layout';
+@import 'import/colors';
+@import 'import/header';
+@import 'import/menu';
+@import 'import/fields';
+@import 'import/icons';

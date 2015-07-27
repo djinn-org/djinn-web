@@ -1,0 +1,13 @@
+<section class="result-content">
+
+  <article ng-repeat="row in result.rows">
+    <span>{{row.title}}</span>
+
+    <i class="md-icon" ng-repeat="item in row.target">
+      {{ result.icons[item] }}
+    </i>
+
+    <span>{{row.value}} %</span>
+  </article>
+
+</section>

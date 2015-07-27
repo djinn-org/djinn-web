@@ -1,0 +1,20 @@
+<section class="choice-content">
+
+  <form name="the.form" novalidate ng-submit="choice.send()">
+
+    <article
+      class="choice-content-block"
+      ng-repeat="item in choice.items" ng-switch="item.type"
+    >
+
+      <choose-yes-no choice="item" ng-switch-when="truefalse"></choose-yes-no>
+      <choose-range  choice="item" ng-switch-when="range"></choose-range>
+      <choose-time   choice="item" ng-switch-when="time"></choose-time>
+
+    </article>
+
+    <button ng-disabled="the.form.$invalid">{{'findRoom' | translate}}</button>
+
+  </form>
+
+</section>

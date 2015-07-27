@@ -1,0 +1,50 @@
+.main-header {
+
+  background: $black-thin;
+  border-bottom: 1px solid $white-mid;
+  @extend .clearfix;
+  left: 0;
+  position: fixed;
+  top :0;
+  width: 100%;
+
+  h1 {
+    float: left;
+    margin: 0;
+    padding: 0.5em 0 0.2em 0.5em;
+    a {
+      color: $white;
+      display: block;
+      font-size: 0.7em;
+      font-weight: 300;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      vertical-align: middle;
+
+      span {
+        display: inline-block;
+        vertical-align: middle;
+        width: 1.5em;
+        img {
+          border-radius: 50%;
+          height: auto;
+          opacity: 0.99;
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .icon-menu {
+    color: $white;
+    display: inline-block;
+    float: right;
+    padding: 1.1em 1em 0;
+    i {
+      font-size: 2em;
+    }
+    &:active i {
+      color: $white-mid;
+    }
+  }
+}

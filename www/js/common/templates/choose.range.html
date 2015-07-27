@@ -1,0 +1,19 @@
+<article class="choice-check">
+
+  <i class="md-icon">{{choice.icon}}</i>
+  <span ng-bind-html="choice.model | translate"></span>
+
+  <aside>
+
+    <strong>{{choice.value}}</strong>
+    <input
+      type="range"
+      min="{{choice.min}}"
+      max="{{choice.max}}"
+      ng-model="choice.value"
+      ng-required="true"
+    >
+
+  </aside>
+
+</article>

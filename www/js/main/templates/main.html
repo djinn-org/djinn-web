@@ -1,0 +1,50 @@
+<header class="main-header">
+  <h1>
+    <a  href=""
+        ng-click="main.goHome()"
+        ng-class="{active: main.goState}"
+    >
+      <span><img src="img/logo.png"></span>
+      Djinn
+    </a>
+  </h1>
+
+  <a
+    href=""
+    class="icon-menu"
+    ng-if="main.goState"
+    ng-click="main.open = true; main.close = false"
+  ><i class="md-icon">menu</i></a>
+
+</header>
+
+<aside class="main-panel" ng-class="{open: main.open, close: main.close}">
+
+  <nav>
+    <a href="" ng-click="main.close = true; main.open = false">
+      <i class="md-icon">cancel</i>
+    </a>
+  </nav>
+
+  <section>
+
+    <article>
+      <a href="" ng-bind-html="'favorites'|translate"></a>
+    </article>
+
+    <article>
+      <a href="">{{'lang' | translate}}</a>
+    </article>
+
+    <article>
+      <a href="" ng-click="">
+        <i class="md-icon">power_settings_new</i>
+        {{'logout' | translate}}
+      </a>
+    </article>
+
+  </section>
+
+</aside>
+
+<section ui-view></section>

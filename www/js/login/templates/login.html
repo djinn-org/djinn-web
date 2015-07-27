@@ -1,0 +1,29 @@
+<form novalidate name="the.form" ng-submit="login.send()" class="login-form">
+
+<input type="password" style="display: none">
+
+  <article>
+    <label for="user"></label>
+    <input
+      id="user"
+      type="text"
+      ng-model="login.user"
+      ng-required="true"
+      placeholder="{{'user' | translate}}"
+    >
+  </article>
+
+  <article>
+    <label for="password"></label>
+    <input
+      id="password"
+      type="password"
+      ng-model="login.password"
+      ng-required="true"
+      placeholder="{{'password' | translate}}"
+    >
+  </article>
+
+  <button ng-disabled="the.form.$invalid">{{'submit' | translate}}</button>
+
+</form>

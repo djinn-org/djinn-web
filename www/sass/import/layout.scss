@@ -1,0 +1,20 @@
+// layout scss
+body {
+  background: url('../img/bg.jpg') no-repeat;
+  background-size: cover;
+  font-family:  $font-stack;
+  font-size:    $font-size;
+}
+
+  main {
+    overflow: auto;
+  }
+
+    .choice-content,
+    .result-content {
+      padding: 5em 0.5em 0;
+    }
+
+    .login-form {
+      padding: 7em 0.5em 0;
+    }
