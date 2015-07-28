@@ -1,29 +1,33 @@
-<form novalidate name="the.form" ng-submit="login.send()" class="login-form">
+<div class="login-content">
 
-<input type="password" style="display: none">
+  <form novalidate name="the.form" ng-submit="login.send()" class="login-form">
 
-  <article>
-    <label for="user"></label>
-    <input
-      id="user"
-      type="text"
-      ng-model="login.user"
-      ng-required="true"
-      placeholder="{{'user' | translate}}"
-    >
-  </article>
+    <input type="password" style="display: none">
 
-  <article>
-    <label for="password"></label>
-    <input
-      id="password"
-      type="password"
-      ng-model="login.password"
-      ng-required="true"
-      placeholder="{{'password' | translate}}"
-    >
-  </article>
+    <article>
+      <label for="user"></label>
+      <input
+        id="user"
+        type="text"
+        ng-model="login.user"
+        ng-required="true"
+        placeholder="{{'user' | translate}}"
+      >
+    </article>
 
-  <button ng-disabled="the.form.$invalid">{{'submit' | translate}}</button>
+    <article>
+      <label for="password"></label>
+      <input
+        id="password"
+        type="password"
+        ng-model="login.password"
+        ng-required="true"
+        placeholder="{{'password' | translate}}"
+      >
+    </article>
 
-</form>
+    <button ng-disabled="the.form.$invalid">{{'submit' | translate}}</button>
+
+  </form>
+
+</div>
