@@ -18,9 +18,13 @@
         },
 
         logout: function() {
-          $scope.main.close = true;
-          $scope.main.open  = false;
           $state.go('main.login');
+        },
+
+        initMain: function() {
+          $scope.main.goState   = null;
+          $scope.main.close     = true;
+          $scope.main.open      = false;
         }
       };
 

@@ -17,6 +17,8 @@
         }
       };
 
+      $scope.main.initMain();
+
     }]);
 
 })();
