@@ -16,7 +16,8 @@
       phone: 'Téléphone',
       favorites: 'Favoris',
       lang: 'Langues',
-      logout: 'Déconnexion'
+      logout: 'Déconnexion',
+      date: 'Calendrier'
     });
 
 })();

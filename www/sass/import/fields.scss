@@ -39,18 +39,16 @@ button {
   }
 }
 
-.choice-check {
-  @extend .clearfix;
-
+.block {
   background: $white-thin;
   border-bottom: 2px solid $black-mid;
-  border-radius: 0.3em 0.3em 0 0;
   margin: 0 0 1em;
   padding: 0.5em 0.5em 0.2em 0.5em;
+}
 
-  &:hover, &:active {
-    background: $white-mid;
-  }
+.choice-check {
+  @extend .clearfix;
+  @extend .block;
 
   >i {
     line-height: 0.9em;
@@ -126,5 +124,29 @@ button {
     font-size: 1.2em;
     position: relative;
     top: 0.2em;
+  }
+}
+
+.result-line {
+  @extend .block;
+  color: $white;
+  cursor: pointer;
+  padding-bottom: 0.5em;
+
+  &:active {
+    background: $white-mid;
+  }
+
+  i {
+    font-size: 1.5em;
+    margin: 0 0 0 0.5em;
+    vertical-align: middle;
+  }
+  span {
+    vertical-align: middle;
+    &:last-of-type {
+      float: right;
+      padding: 0.1em 0 0;
+    }
   }
 }

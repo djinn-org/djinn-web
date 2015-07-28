@@ -1,13 +1,17 @@
 <section class="result-content">
 
-  <article ng-repeat="row in result.rows">
+  <article ng-repeat="row in result.rows track by $index" class="result-line">
+
     <span>{{row.title}}</span>
 
-    <i class="md-icon" ng-repeat="item in row.target">
-      {{ result.icons[item] }}
-    </i>
+    <span>
+      <i class="md-icon" ng-repeat="item in row.target">
+        {{ result.icons[item] }}
+      </i>
+    </span>
 
     <span>{{row.value}} %</span>
+
   </article>
 
 </section>

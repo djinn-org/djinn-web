@@ -16,7 +16,8 @@
       duration: 'Duration',
       favorites: 'Favorites',
       lang: 'Languages',
-      logout: 'Logout'
+      logout: 'Logout',
+      date: 'Calendar'
     });
 
 })();

@@ -41,12 +41,6 @@
         model:  'duration',
         icon:   'access_time',
         type:   'time'
-      },
-
-      {
-        model:  'date',
-        icon:   'calendar',
-        type:   'date'
       }
 
     ]);
