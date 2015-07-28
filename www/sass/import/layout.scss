@@ -4,6 +4,7 @@ body {
   background-size: cover;
   font-family:  $font-stack;
   font-size:    $font-size;
+  font-weight:  300;
 }
 
   main {
@@ -15,7 +16,7 @@ body {
 
     .choice-content,
     .result-content {
-      padding: 5em 0.5em 0;
+      padding: 8em 0.5em 0;
     }
 
     .login-content {
