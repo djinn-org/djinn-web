@@ -1,4 +1,4 @@
-<article class="choice-check">
+<article class="choice-check choicebox" ng-click="choice.value = !choice.value">
 
   <i class="md-icon">{{choice.icon}}</i>
   <span ng-bind-html="choice.model | translate"></span>
@@ -6,22 +6,12 @@
   <aside>
 
     <input
-      type="radio"
+      type="checkbox"
       ng-model="choice.value"
-      id="id-{{choice.model}}-1"
-      ng-required="true"
+      id="id-{{choice.model}}"
       ng-value="true"
     >
-    <label for="id-{{choice.model}}-1"><i class="md-icon">check</i></label>
-
-    <input
-      type="radio"
-      ng-model="choice.value"
-      id="id-{{choice.model}}-2"
-      ng-required="true"
-      ng-value="false"
-    >
-    <label for="id-{{choice.model}}-2"><i class="md-icon">close</i></label>
+    <label for="id-{{choice.model}}"><i class="md-icon">check</i></label>
 
   </aside>
 

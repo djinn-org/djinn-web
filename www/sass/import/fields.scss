@@ -46,10 +46,16 @@ button {
   padding: 0.5em 0.5em 0.2em 0.5em;
 }
 
+.choicebox {
+   cursor: pointer;
+   &:active {
+    background: $white-mid;
+   }
+}
+
 .choice-check {
   @extend .clearfix;
   @extend .block;
-
   >i {
     line-height: 0.9em;
     font-size: 2.5em;
@@ -70,12 +76,10 @@ button {
     text-align: right;
   }
 
-  input[type=radio] {
+  input[type=checkbox] {
     position: absolute;
     clip: rect(0, 0, 0, 0);
-    & + label {
-      cursor: pointer;
-    }
+
     +label {
       color: $white-strong;
       i {
@@ -84,13 +88,10 @@ button {
         text-shadow: 1px 1px 1px $black;
       }
     }
-
-    &:checked:first-of-type + label {
+    &:checked + label {
       color: $green;
     }
-    &:checked:last-of-type + label {
-      color: $red;
-    }
+
   }
 
   input[type=range] {

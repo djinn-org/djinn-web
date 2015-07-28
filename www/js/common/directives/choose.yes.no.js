@@ -11,9 +11,6 @@
         templateUrl: 'js/common/templates/choose.yes.no.html',
         scope: {
           choice: '='
-        },
-        link: function(scope, elem) {
-
         }
       };
 
