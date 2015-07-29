@@ -5,19 +5,23 @@
   angular.module('djinnApp', [
     'ui.router',
     'pascalprecht.translate',
-    'ngSanitize'
+    'ngSanitize',
+    'tmh.dynamicLocale'
   ])
 
-  .config(['$locationProvider', '$compileProvider',
-  function($locationProvider, $compileProvider) {
+  .config(['$locationProvider', '$compileProvider', 'tmhDynamicLocaleProvider',
+  function($locationProvider, $compileProvider, tmhDynamicLocaleProvider) {
 
     $locationProvider.html5Mode(false);
     $compileProvider.debugInfoEnabled(false);
 
+    tmhDynamicLocaleProvider.localeLocationPattern('i18n/angular-locale_{{locale}}.js');
   }])
 
-  .run([
-  function() {
+  .run(['LocaleFactory',
+  function(LocaleFactory) {
+
+    LocaleFactory.setLang();
 
   }]);
 

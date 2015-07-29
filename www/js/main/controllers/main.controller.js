@@ -3,13 +3,20 @@
 (function() {
 
   angular.module('djinnApp')
-    .controller('MainController', ['$scope', '$state',
-    function($scope, $state) {
+    .controller('MainController', ['$scope', '$state', 'LanguagesValue', 'LocaleFactory',
+    function($scope, $state, LanguagesValue, LocaleFactory) {
 
       $scope.main = {
         goState: null,
         open: false,
         close: true,
+
+        languages:    LanguagesValue,
+        selectedLang: LocaleFactory.getPrefLang(),
+        setPrefLang:  function(lang) {
+          LocaleFactory.setPrefLang(lang);
+          $scope.main.selectedLang = lang;
+        },
 
         goHome: function() {
           if($scope.main.goState) {

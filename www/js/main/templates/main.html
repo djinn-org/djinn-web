@@ -31,14 +31,21 @@
       <a href="" ng-bind-html="'favorites'|translate"></a>
     </article>
 
-    <article>
-      <a href="">{{'lang' | translate}}</a>
+    <article class="menu-lang">
+      <span ng-bind-html="'lang' | translate"></span> :
+      <a  href=""
+          ng-repeat="language in main.languages"
+          ng-click="main.setPrefLang(language)"
+      >
+        <span ng-class="{selected: main.selectedLang === language}">{{language | uppercase}}</span>
+        <span ng-if="!$last"> -&nbsp;</span>
+      </a>
     </article>
 
     <article>
       <a href="" ng-click="main.logout()">
         <i class="md-icon">power_settings_new</i>
-        {{'logout' | translate}}
+        <span ng-bind-html="'logout' | translate"></span>
       </a>
     </article>
 

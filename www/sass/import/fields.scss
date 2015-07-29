@@ -78,12 +78,14 @@ button {
   }
   > i, span {
     color: $white;
-    cursor: default;
     float: left;
   }
   aside {
     float: right;
     text-align: right;
+    label {
+      cursor: pointer;
+    }
   }
 
   input[type=checkbox] {
@@ -164,6 +166,7 @@ button {
     vertical-align: middle;
   }
   span {
+    font-size: 1.2em;
     vertical-align: middle;
     &:last-of-type {
       float: right;
