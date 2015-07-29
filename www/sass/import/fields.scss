@@ -14,6 +14,16 @@ input[type='text'], input[type='password'] {
   padding: 0.5em;
   margin: 0 0 3em;
   width: 100%;
+
+  &::-webkit-input-placeholder {
+    color: $white-mid;
+  }
+  &::-moz-placeholder {
+    color: $white-mid;
+  }
+  &:-ms-input-placeholder {
+    color: $white-mid;
+  }
 }
 
 button {
@@ -40,8 +50,8 @@ button {
 }
 
 .block {
-  background: $white-thin;
-  border-bottom: 2px solid $black-mid;
+  background: $black-thin;
+  border-bottom: 2px solid $black-light;
   margin: 0 0 1em;
   padding: 0.5em 0.5em 0.2em 0.5em;
 }
@@ -85,11 +95,11 @@ button {
       i {
         font-size: 2em;
         font-weight: bold;
-        text-shadow: 1px 1px 1px $black;
       }
     }
     &:checked + label {
       color: $green;
+      text-shadow: 1px 1px 1px $black;
     }
 
   }

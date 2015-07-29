@@ -1,6 +1,6 @@
 // layout scss
 body {
-  background: url('../img/bg.jpg') no-repeat;
+  background: url('../img/bgcolor.jpg') no-repeat;
   background-size: cover;
   font-family:  $font-stack;
   font-size:    $font-size;
@@ -16,7 +16,7 @@ body {
 
     .choice-content,
     .result-content {
-      padding: 8em 0.5em 0;
+      padding: 8em 1em 0;
     }
 
     .login-content {
@@ -34,7 +34,7 @@ body {
 
     .login-form {
       display: inline-block;
-      padding: 0 0.5em;
+      padding: 0 10%;
       vertical-align: middle;
       width: 100%;
     }
