@@ -14,7 +14,21 @@
         },
         link: function(scope) {
 
-          scope.choice.value = 0;
+          scope.choice.value = scope.choice.value ? scope.choice.value : 0;
+
+          scope.range = {
+
+            add: function() {
+              scope.choice.value++;
+            },
+
+            remove: function() {
+              if(scope.choice.value <= 0) {
+                return;
+              }
+              scope.choice.value--;
+            }
+          };
 
         }
       };

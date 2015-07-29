@@ -38,11 +38,24 @@
       },
 
       {
-        model:  'duration',
-        icon:   'access_time',
-        type:   'time'
-      }
+        model:  'date',
+        icon:   'today',
+        type:   'startdate'
+      },
 
+      {
+        model:  'fromtime',
+        icon:   'alarm',
+        type:   'fromtime',
+        step:   15
+      },
+
+      {
+        model:  'duration',
+        icon:   'schedule',
+        type:   'duration',
+        step:    15
+      }
     ]);
 
 })();

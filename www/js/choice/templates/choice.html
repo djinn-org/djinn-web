@@ -7,9 +7,12 @@
       ng-repeat="item in choice.items" ng-switch="item.type"
     >
 
-      <choose-yes-no choice="item" ng-switch-when="truefalse"></choose-yes-no>
-      <choose-range  choice="item" ng-switch-when="range"></choose-range>
-      <choose-time   choice="item" ng-switch-when="time"></choose-time>
+      <choose-yes-no    choice="item" ng-switch-when="truefalse"></choose-yes-no>
+      <choose-range     choice="item" ng-switch-when="range"></choose-range>
+
+      <choose-startdate choice="item" ng-switch-when="startdate"></choose-startdate>
+      <choose-fromtime choice="item" ng-switch-when="fromtime"></choose-fromtime>
+      <choose-duration  choice="item" ng-switch-when="duration"></choose-duration>
 
     </article>
 

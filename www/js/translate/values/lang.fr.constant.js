@@ -17,7 +17,8 @@
       favorites: 'Favoris',
       lang: 'Langues',
       logout: 'Déconnexion',
-      date: 'Calendrier'
+      date: 'Date',
+      fromtime: 'Début'
     });
 
 })();

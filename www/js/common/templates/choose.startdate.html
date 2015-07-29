@@ -5,13 +5,13 @@
 
   <aside>
 
-    <span>{{choice.value}}</span>
+    <span>{{choice.value | date}}</span>
 
     <span class="arrows">
-      <a href="" ng-click="range.add()">
+      <a href="" ng-click="dt.add()">
         <i class="md-icon">expand_less</i>
       </a>
-      <a href="" ng-click="range.remove()">
+      <a href="" ng-click="dt.remove()">
         <i class="md-icon">expand_more</i>
       </a>
     </span>

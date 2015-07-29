@@ -7,6 +7,12 @@ body {
   font-weight:  300;
 }
 
+@media screen and (max-width: 480px) {
+  body {
+    font-size: $font-size-min;
+  }
+}
+
   main {
     overflow: auto;
     > section {

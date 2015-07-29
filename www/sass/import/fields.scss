@@ -130,11 +130,22 @@ button {
   }
 
   strong {
-    color: $white;
-    font-size: 1.2em;
+    cursor: pointer;
+    display: inline-block;
+    float: left;
+    font-weight: 300;
     position: relative;
-    top: 0.2em;
+    left: 0.3em;
+    span {
+      display: inline-block;
+      padding: 0 0.2em;
+    }
   }
+  .sel {
+    background: $white-mid;
+    border-radius: 0.3em;
+  }
+
 }
 
 .result-line {
@@ -157,6 +168,16 @@ button {
     &:last-of-type {
       float: right;
       padding: 0.1em 0 0;
+    }
+  }
+}
+
+.arrows {
+  a {
+    color: $white;
+    font-size:  2em;
+    :active {
+      color: $white-mid;
     }
   }
 }

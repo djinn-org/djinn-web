@@ -5,13 +5,13 @@
 
   <aside>
 
-    <span>{{choice.value}}</span>
+    <span>{{duration.hh | timenumber}} : {{duration.mm | timenumber}}</span>
 
     <span class="arrows">
-      <a href="" ng-click="range.add()">
+      <a href="" ng-click="duration.add()">
         <i class="md-icon">expand_less</i>
       </a>
-      <a href="" ng-click="range.remove()">
+      <a href="" ng-click="duration.remove()">
         <i class="md-icon">expand_more</i>
       </a>
     </span>
