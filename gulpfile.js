@@ -89,7 +89,8 @@
   gulp.task('copyFiles', function () {
     return gulp.src([
         env.base + '/**/*.*',
-        '!**/*.{js,css,scss}',
+        '!' + env.base + '/js/**/*.js',
+        '!**/*.{css,scss}',
         '!' + env.base + '/bower_components/**/*.*'
       ], {base: env.base})
       .pipe(gulp.dest(env.dist));
