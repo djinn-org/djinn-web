@@ -4,10 +4,12 @@ input {
 }
 
 input[type='text'], input[type='password'] {
-  background: none;
+  background: $black-thin;
+
   border-style: solid;
-  border-color: $white;
-  border-width: 0 0 1px;
+  border-color: $black-light;
+  border-width: 0 0 2px;
+
   color: $white;
   display: block;
   font-size: 1em;
@@ -64,6 +66,10 @@ button {
 }
 
 .choice-check {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+
   @extend .clearfix;
   @extend .block;
   >i {
@@ -151,6 +157,10 @@ button {
 }
 
 .result-line {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+
   @extend .block;
   color: $white;
   cursor: pointer;
