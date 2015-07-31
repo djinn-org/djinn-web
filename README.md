@@ -8,6 +8,7 @@ Site running on http://localhost:9000
 
 # Build
 
-* 1. Run "gulp build"
-* 2. Creates a dist directory with compiled and minified files
-* 3. Upload the dist content to host
+* 1. Run "gulp clean"
+* 2. Run "gulp build"
+* 3. Creates a dist directory with compiled and minified files
+* 4. Upload the dist content to host
