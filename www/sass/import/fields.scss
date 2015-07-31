@@ -55,7 +55,6 @@ button {
 .block {
   background: $black-thin;
   border-bottom: 2px solid $black-light;
-  margin: 0 0 1em;
   padding: 0.5em 0.5em 0.2em 0.5em;
 }
 
@@ -70,6 +69,8 @@ button {
   @extend .user-select-none;
   @extend .clearfix;
   @extend .block;
+  margin: 0 0 1em;
+
   >i {
     line-height: 0.9em;
     font-size: 2.5em;
@@ -152,33 +153,6 @@ button {
     border-radius: 0.3em;
   }
 
-}
-
-.result-line {
-  @extend .user-select-none;
-
-  @extend .block;
-  color: $white;
-  cursor: pointer;
-  padding-bottom: 0.5em;
-
-  &:active {
-    background: $white-mid;
-  }
-
-  i {
-    font-size: 1.5em;
-    margin: 0 0 0 0.5em;
-    vertical-align: middle;
-  }
-  span {
-    font-size: 1.2em;
-    vertical-align: middle;
-    &:last-of-type {
-      float: right;
-      padding: 0.1em 0 0;
-    }
-  }
 }
 
 .arrows {

@@ -18,7 +18,8 @@
       lang: 'Langues',
       logout: 'Déconnexion',
       date: 'Date',
-      fromtime: 'Début'
+      fromtime: 'Début',
+      bookit: 'Réserver'
     });
 
 })();

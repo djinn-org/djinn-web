@@ -1,0 +1,40 @@
+.result-line {
+  @extend .user-select-none;
+
+  @extend .block;
+  color: $white;
+  cursor: pointer;
+  margin: 1em 0 0;
+
+  &:active {
+    background: $white-mid;
+  }
+
+  i {
+    font-size: 1.5em;
+    margin: 0 0 0 0.5em;
+    vertical-align: middle;
+  }
+  span {
+    font-size: 1.2em;
+    vertical-align: middle;
+    &:last-of-type {
+      float: right;
+      padding: 0.1em 0 0;
+    }
+  }
+}
+
+.result-view {
+  background: $black-mid;
+  color: $white;
+  padding: 1em 1em 0.2em;
+  div {
+    padding: 0 0 0.5em;
+  }
+  span {
+    display: inline-block;
+    padding: 0.1em 0 0 1em;
+    vertical-align: top;
+  }
+}

@@ -20,9 +20,12 @@ body {
     }
   }
 
-    .choice-content,
-    .result-content {
+    .choice-content {
       padding: 4em 1em 1em;
+    }
+
+    .result-content {
+      padding: 3em 1em 1em;
     }
 
     .login-content {

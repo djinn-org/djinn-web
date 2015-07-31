@@ -1,17 +1,34 @@
 <section class="result-content">
 
-  <article ng-repeat="row in result.rows track by $index" class="result-line">
+  <div ng-repeat="row in result.rows track by $index">
 
-    <span>{{row.title}}</span>
+    <article class="result-line" ng-click="result.open($index)">
 
-    <span>
-      <i class="md-icon" ng-repeat="item in row.target">
-        {{ result.icons[item] }}
-      </i>
-    </span>
+      <span>{{row.title}}</span>
 
-    <span>{{row.value}} %</span>
+      <span>
+        <i class="md-icon" ng-repeat="item in row.target">
+          {{ result.icons[item] }}
+        </i>
+      </span>
 
-  </article>
+      <span>{{row.value}} %</span>
+
+    </article>
+
+    <aside class="result-view" ng-if="row.opened">
+
+      <div ng-repeat="(key, value) in row.detail">
+        <i class="md-icon">{{key}}</i>
+        <span>{{value}}</span>
+      </div>
+
+      <footer>
+        <button ng-click="result.book($index)" ng-bind-html="'bookit' | translate"></button>
+      </footer>
+
+    </aside>
+
+  </div>
 
 </section>

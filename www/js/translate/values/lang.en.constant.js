@@ -18,7 +18,8 @@
       lang: 'Languages',
       logout: 'Logout',
       date: 'Date',
-      fromtime: 'Start'
+      fromtime: 'Start',
+      bookit: 'Book it'
     });
 
 })();

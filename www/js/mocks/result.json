@@ -10,7 +10,13 @@
         "computer",
         "capacity",
         "duration"
-      ]
+      ],
+      "detail": {
+        "my_location": "Floor 1, block 1 : Auditorium",
+        "directions_walk": "2min",
+        "people": "Nobody inside",
+        "access_time": "Next meeting in 30min"
+      }
     },
     {
       "id": 2,
@@ -20,7 +26,13 @@
         "visiocall",
         "computer",
         "duration"
-      ]
+      ],
+      "detail": {
+        "my_location": "Floor 1, block 1 : Auditorium",
+        "directions_walk": "2min",
+        "people": "Nobody inside",
+        "access_time": "Next meeting in 15min"
+      }
     },
     {
       "id": 3,
@@ -29,7 +41,13 @@
       "target": [
         "computer",
         "duration"
-      ]
+      ],
+      "detail": {
+        "my_location": "Floor 1, block 1 : Auditorium",
+        "directions_walk": "2min",
+        "people": "Nobody inside",
+        "access_time": "Next meeting in 60min"
+      }
     },
     {
       "id": 1,
@@ -40,7 +58,13 @@
         "computer",
         "capacity",
         "duration"
-      ]
+      ],
+      "detail": {
+        "my_location": "Floor 1, block 1 : Auditorium",
+        "directions_walk": "2min",
+        "people": "Nobody inside",
+        "access_time": "Next meeting in 55min"
+      }
     },
     {
       "id": 2,
@@ -50,7 +74,13 @@
         "visiocall",
         "computer",
         "duration"
-      ]
+      ],
+      "detail": {
+        "my_location": "Floor 1, block 1 : Auditorium",
+        "directions_walk": "2min",
+        "people": "Nobody inside",
+        "access_time": "Next meeting in 20min"
+      }
     },
     {
       "id": 3,
@@ -59,7 +89,13 @@
       "target": [
         "computer",
         "duration"
-      ]
+      ],
+      "detail": {
+        "my_location": "Floor 1, block 1 : Auditorium",
+        "directions_walk": "2min",
+        "people": "Nobody inside",
+        "access_time": "Next meeting in 10min"
+      }
     },
     {
       "id": 1,
@@ -70,7 +106,13 @@
         "computer",
         "capacity",
         "duration"
-      ]
+      ],
+      "detail": {
+        "my_location": "Floor 1, block 1 : Auditorium",
+        "directions_walk": "2min",
+        "people": "Nobody inside",
+        "access_time": "Next meeting in 15min"
+      }
     },
     {
       "id": 2,
@@ -80,7 +122,13 @@
         "visiocall",
         "computer",
         "duration"
-      ]
+      ],
+      "detail": {
+        "my_location": "Floor 1, block 1 : Auditorium",
+        "directions_walk": "2min",
+        "people": "Nobody inside",
+        "access_time": "Next meeting in 50min"
+      }
     },
     {
       "id": 3,
@@ -89,7 +137,13 @@
       "target": [
         "computer",
         "duration"
-      ]
+      ],
+      "detail": {
+        "my_location": "Floor 1, block 1 : Auditorium",
+        "directions_walk": "2min",
+        "people": "Nobody inside",
+        "access_time": "Next meeting in 60min"
+      }
     }
   ]
 }
