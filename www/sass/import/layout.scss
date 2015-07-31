@@ -14,10 +14,11 @@ body {
 }
 
   main {
-    overflow: auto;
-    -webkit-overflow-scrolling: touch;
+    overflow: hidden;
 
     > section {
+      overflow: auto;
+      -webkit-overflow-scrolling: touch;
       height: 100%;
     }
   }
