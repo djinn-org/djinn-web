@@ -6,7 +6,8 @@
     'ui.router',
     'pascalprecht.translate',
     'ngSanitize',
-    'tmh.dynamicLocale'
+    'tmh.dynamicLocale',
+    'ngTouch'
   ])
 
   .config(['$locationProvider', '$compileProvider', 'tmhDynamicLocaleProvider',
