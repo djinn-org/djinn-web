@@ -29,6 +29,7 @@ input[type='text'], input[type='password'] {
 }
 
 button {
+  @extend .user-select-none;
   background: transparent;
   border: 1px solid $white;
   border-radius: 0.3em;
@@ -66,10 +67,7 @@ button {
 }
 
 .choice-check {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-
+  @extend .user-select-none;
   @extend .clearfix;
   @extend .block;
   >i {
@@ -157,9 +155,7 @@ button {
 }
 
 .result-line {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
+  @extend .user-select-none;
 
   @extend .block;
   color: $white;
