@@ -41,7 +41,7 @@
           angular.forEach(currentSearch, function(parm) {
 
             switch(parm.model) {
-              case 'visocall':
+              case 'visiocall':
               case 'octopus':
               case 'computer':
               case 'phone':
@@ -74,14 +74,7 @@
           searchParms += 'start=' + res.formatDate(myStartDate, myStartTime) + '&';
 
           if (stuff.length) {
-            var list = '';
-            angular.forEach(stuff, function(item, ix) {
-              list += item;
-              if (stuff.length - 1 !== ix) {
-                list += ',';
-              }
-            });
-            searchParms += 'equipment=' + list + '&';
+            searchParms += 'equipment=' + res.formatStuff(stuff) + '&';
           }
 
           return searchParms;
@@ -94,6 +87,17 @@
           myDate.setMinutes(myTime.mm);
 
           return myDate.toISOString();
+        },
+
+        formatStuff: function(stuff) {
+          var list = '';
+          angular.forEach(stuff, function(item, ix) {
+            list += item;
+            if (stuff.length - 1 !== ix) {
+              list += ',';
+            }
+          });
+          return list;
         }
       };
 
