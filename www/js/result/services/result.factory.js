@@ -17,10 +17,12 @@
         getRooms: function() {
           var defer = $q.defer();
 
+          var parms = res.formatParms();
+
           $http({
             method:   'GET',
-            url:      'js/mocks/result.json',
-            data:     currentSearch
+            //url:      'js/mocks/result.json',
+            url:      '/api/v1/find/rooms/' + parms
           }).success(function(data) {
 
             defer.resolve(data.rows);
@@ -28,6 +30,70 @@
           });
 
           return defer.promise;
+        },
+
+        formatParms: function() {
+          var searchParms = '?';
+          var stuff = [];
+
+          var myStartDate, myStartTime;
+
+          angular.forEach(currentSearch, function(parm) {
+
+            switch(parm.model) {
+              case 'visocall':
+              case 'octopus':
+              case 'computer':
+              case 'phone':
+                if (parm.value) {
+                  stuff.push(parm.model);
+                }
+              break;
+
+              case 'capacity':
+                if (parm.value) {
+                  searchParms += 'capacity=' + parm.value + '&';
+                }
+              break;
+
+              case 'date':
+                myStartDate = parm.value;
+              break;
+
+              case 'fromtime':
+                myStartTime = parm.value;
+              break;
+
+              case 'duration':
+                searchParms += 'minutes=' + parm.value + '&';
+              break;
+            }
+
+          });
+
+          searchParms += 'start=' + res.formatDate(myStartDate, myStartTime) + '&';
+
+          if (stuff.length) {
+            var list = '';
+            angular.forEach(stuff, function(item, ix) {
+              list += item;
+              if (stuff.length - 1 !== ix) {
+                list += ',';
+              }
+            });
+            searchParms += 'equipment=' + list + '&';
+          }
+
+          return searchParms;
+        },
+
+        formatDate: function(myDay, myTime) {
+          var myDate = new Date();
+          myDate.setTime(myDay);
+          myDate.setHours(myTime.hh);
+          myDate.setMinutes(myTime.mm);
+
+          return myDate.toISOString();
         }
       };
 
