@@ -24,7 +24,7 @@
 
           $http({
             method:   'GET',
-            url:      '/api/v1/find/rooms/a' + parms
+            url:      '/api/v1/find/rooms/' + parms
           }).success(function(data) {
 
             // sort data by accuracy descending
