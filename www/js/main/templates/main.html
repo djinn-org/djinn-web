@@ -1,4 +1,12 @@
 <header class="main-header">
+
+  <a
+    href=""
+    class="icon-menu"
+    ng-if="main.goState"
+    ng-click="main.open = true; main.close = false"
+  ><i class="md-icon">menu</i></a>
+
   <h1>
     <a  href=""
         ng-click="main.goHome()"
@@ -7,13 +15,6 @@
       Djinn
     </a>
   </h1>
-
-  <a
-    href=""
-    class="icon-menu"
-    ng-if="main.goState"
-    ng-click="main.open = true; main.close = false"
-  ><i class="md-icon">menu</i></a>
 
 </header>
 
@@ -54,3 +55,5 @@
 </aside>
 
 <section ui-view></section>
+
+<djinn-modale></djinn-modale>

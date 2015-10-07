@@ -21,7 +21,8 @@
       fromtime: 'Start',
       bookit: 'Book it',
       floor:  'Floor',
-      building: 'building'
+      building: 'building',
+      msgBooked: 'Room booked !'
     });
 
 })();

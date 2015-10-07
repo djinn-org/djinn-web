@@ -9,6 +9,7 @@
       var currentSearch   = {};
       var currentDate     = null;
       var currentDuration = null;
+      var currentStuff    = [];
 
       var res = {
 
@@ -36,9 +37,9 @@
 
         formatParms: function() {
           var searchParms = '?';
-          var stuff = [];
-
           var myStartDate, myStartTime;
+
+          currentStuff = [];
 
           angular.forEach(currentSearch, function(parm) {
 
@@ -48,7 +49,7 @@
               case 'computer':
               case 'phone':
                 if (parm.value) {
-                  stuff.push(parm.model);
+                  currentStuff.push(parm.model);
                 }
               break;
 
@@ -78,8 +79,8 @@
           searchParms += 'start=' + res.formatDate(myStartDate, myStartTime) + '&';
 
           // format equipment list
-          searchParms += stuff.length ? 'equipment=' +
-                            res.formatStuff(stuff) + '&': '';
+          searchParms += currentStuff.length ? 'equipment=' +
+                            res.formatStuff(currentStuff) + '&': '';
 
           return searchParms;
         },
@@ -105,16 +106,17 @@
 
         getCurrentSearch: function() {
           return {
-            startdate: currentDate,
-            duration:  currentDuration
+            startdate:  currentDate,
+            duration:   currentDuration,
+            stuff:      currentStuff
           };
         }
       };
 
       return {
-        setSearch:    res.setSearch,
+        setSearch:        res.setSearch,
         getCurrentSearch: res.getCurrentSearch,
-        getRooms:     res.getRooms
+        getRooms:         res.getRooms
       };
 
     }]);

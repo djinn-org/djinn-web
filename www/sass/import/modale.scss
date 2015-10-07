@@ -1,0 +1,38 @@
+.modale {
+  display: none;
+  height: 100%;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  transition: all .2s ease-out;
+  width: 100%;
+  z-index: 1000;
+
+  article {
+    background: $black-strong;
+    color: $white;
+    display: inline-block;
+    min-width: 300px;
+    padding: 1em 2em 1em 1.5em;
+    position: relative;
+    text-align: left;
+    vertical-align: middle;
+    width: 60%;
+  }
+
+  &:after {
+    content: '';
+    display: inline-block;
+    font-size: 0;
+    height: 100%;
+    vertical-align: middle;
+    width: 0;
+  }
+
+  i {
+    cursor: pointer;
+    float: right;
+  }
+}

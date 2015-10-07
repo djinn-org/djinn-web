@@ -3,8 +3,8 @@
 (function() {
 
   angular.module('djinnApp')
-    .factory('BookingFactory', ['$http', '$q', 'ResultFactory',
-    function($http, $q, ResultFactory) {
+    .factory('BookingFactory', ['$http', '$q', '$rootScope', '$filter', '$state', 'ResultFactory',
+    function($http, $q, $rootScope, $filter, $state, ResultFactory) {
 
       var book = {
 
@@ -22,11 +22,16 @@
           })
           .success(function(data, status) {
             if (status === 201) {
+              $rootScope.$emit('openModale', {message: $filter('translate')('msgBooked')});
+              $state.go('main.choice');
               defer.resolve('ok');
+            } else {
+              $rootScope.$emit('openModale', {
+                status: status,
+                message: data
+              });
+              defer.reject('ko');
             }
-          })
-          .error(function(data, status) {
-            defer.reject(status);
           });
 
           return defer.promise;

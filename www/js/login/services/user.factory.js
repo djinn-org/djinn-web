@@ -3,18 +3,28 @@
 (function() {
 
   angular.module('djinnApp')
-    .factory('UserFactory', [
-    function() {
+    .factory('UserFactory', ['$state',
+    function($state) {
 
-      var fact = {
-        saveUser: function(user) {
+      var user = null;
 
+      var fac = {
+        login: function() {
+          user = true;
+        },
+
+        isLogged: function(evt, toState) {
+          if (!user && toState.name !== 'main.login') {
+            evt.preventDefault();
+            $state.go('main.login');
+          }
         }
       };
 
       return {
-        saveUser: fact.saveUser
+        isLogged: fac.isLogged,
+        login:    fac.login
       };
-    }]);
 
+    }]);
 })();

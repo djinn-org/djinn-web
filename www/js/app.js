@@ -20,13 +20,16 @@
 
     // interceptors
     $httpProvider.interceptors.push('ApiFactory');
+    $httpProvider.interceptors.push('HttpErrorFactory');
 
   }])
 
-  .run(['LocaleFactory',
-  function(LocaleFactory) {
+  .run(['$rootScope', 'LocaleFactory', 'UserFactory',
+  function($rootScope, LocaleFactory, UserFactory) {
 
     LocaleFactory.setLang();
+
+    $rootScope.$on('$stateChangeStart', UserFactory.isLogged);
 
   }]);
 

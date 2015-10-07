@@ -21,7 +21,8 @@
       fromtime: 'Début',
       bookit: 'Réserver',
       floor:  'Etage',
-      building: 'bâtiment'
+      building: 'bâtiment',
+      msgBooked: 'Reservation effectuée !'
     });
 
 })();

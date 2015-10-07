@@ -9,6 +9,7 @@
       var log = {
         login: function(user, password) {
 
+          UserFactory.login();
           var defer = $q.defer();
           defer.resolve('');
 /*          $http({
