@@ -21,7 +21,8 @@
 
         book: function(idx) {
 
-          BookingFactory.bookIt($scope.result.rows[idx]).then(function() {
+          BookingFactory.bookIt($scope.result.rows[idx], ResultData)
+          .then(function() {
 
             // success
 

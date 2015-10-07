@@ -6,7 +6,9 @@
     .factory('ResultFactory', ['$http', '$q', '$filter',
     function($http, $q, $filter) {
 
-      var currentSearch = {};
+      var currentSearch   = {};
+      var currentDate     = null;
+      var currentDuration = null;
 
       var res = {
 
@@ -65,6 +67,7 @@
               break;
 
               case 'duration':
+                currentDuration = parm.value;
                 searchParms += 'minutes=' + parm.value + '&';
               break;
             }
@@ -87,7 +90,8 @@
           myDate.setHours(myTime.hh);
           myDate.setMinutes(myTime.mm);
 
-          return myDate.toISOString();
+          currentDate = myDate.toISOString();
+          return currentDate;
         },
 
         formatStuff: function(stuff) {
@@ -97,11 +101,19 @@
             list += (stuff.length - 1 !== ix) ? ',': '';
           });
           return list;
+        },
+
+        getCurrentSearch: function() {
+          return {
+            startdate: currentDate,
+            duration:  currentDuration
+          };
         }
       };
 
       return {
         setSearch:    res.setSearch,
+        getCurrentSearch: res.getCurrentSearch,
         getRooms:     res.getRooms
       };
 
