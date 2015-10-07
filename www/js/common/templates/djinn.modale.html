@@ -3,7 +3,7 @@
     <i class="md-icon">cancel</i>
     <p ng-if="dir.message || dir.status">
       <span ng-if="dir.status">{{dir.status}}</span>
-      <span ng-if="dir.message">{{dir.message}}</span>
+      <span ng-if="dir.message" ng-bind-html="dir.message"></span>
     </p>
     <p ng-if="dir.url">
       {{dir.url}}

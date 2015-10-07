@@ -50,7 +50,7 @@
           };
           var nbIcons = 0, icStart = 0;
           angular.forEach(data, function(item) {
-            nbIcons = Math.floor(Math.random() * 4) + 1;
+            nbIcons = Math.floor(Math.random() * 3) + 1;
             icStart = Math.floor(Math.random() * 4);
             icons.target = icontypes.slice(icStart, nbIcons + icStart);
             angular.extend(item, icons);
