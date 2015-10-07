@@ -31,6 +31,18 @@
             if (!angular.isArray(data)) {
               data = [];
             }
+
+            // add fake icons
+            var icons = {
+              'target': [
+                'visiocall',
+                'computer',
+                'duration'
+            ]};
+            angular.forEach(data, function(item) {
+              angular.extend(item, icons);
+            });
+
             var myData = $filter('orderBy')(data, 'accuracy', true);
             defer.resolve(myData);
           });

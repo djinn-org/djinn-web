@@ -3,8 +3,8 @@
 (function() {
 
   angular.module('djinnApp')
-    .controller('ResultController', ['$scope', 'ResultData', 'ChoiceFactory', 'BookingFactory',
-    function($scope, ResultData, ChoiceFactory, BookingFactory) {
+    .controller('ResultController', ['$scope', '$rootScope', '$state', '$filter', 'ResultData', 'ChoiceFactory', 'BookingFactory',
+    function($scope, $rootScope, $state, $filter, ResultData, ChoiceFactory, BookingFactory) {
 
       // logo menu link
       $scope.main.goState = 'main.choice';
@@ -24,7 +24,8 @@
           BookingFactory.bookIt($scope.result.rows[idx], ResultData)
           .then(function() {
 
-            // success
+            $rootScope.$emit('openModale', {message: $filter('translate')('msgBooked')});
+            $state.go('main.choice');
 
           });
 
