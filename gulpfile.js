@@ -105,7 +105,7 @@
       .pipe(filter('**/*.js'))
       .pipe(concat('app.min.js'))
       .pipe(ngAnnotate())
-      .pipe(uglify({mangle: false}))
+      .pipe(uglify({mangle: false}).on('error', gutil.log))
       .pipe(gulp.dest(env.dist + '/min'));
   });
 

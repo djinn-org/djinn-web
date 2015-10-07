@@ -24,10 +24,13 @@
 
           $http({
             method:   'GET',
-            url:      '/api/v1/find/rooms/' + parms
+            url:      '/api/v1/find/rooms/a' + parms
           }).success(function(data) {
 
             // sort data by accuracy descending
+            if (!angular.isArray(data)) {
+              data = [];
+            }
             var myData = $filter('orderBy')(data, 'accuracy', true);
             defer.resolve(myData);
           });

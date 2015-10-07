@@ -27,7 +27,7 @@
               dir.showIt();
             },
 
-            formatMore(datamore) {
+            formatMore: function(datamore) {
               if (!angular.isObject(datamore)) {
                 return null;
               }
