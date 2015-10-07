@@ -32,22 +32,29 @@
               data = [];
             }
 
-            // add fake icons
-            var icons = {
-              'target': [
-                'visiocall',
-                'computer',
-                'duration'
-            ]};
-            angular.forEach(data, function(item) {
-              angular.extend(item, icons);
-            });
+            // TEMP - add fake icons
+            res.addFakeIcons(data);
+            // END TEMP - add fake icons
 
             var myData = $filter('orderBy')(data, 'accuracy', true);
             defer.resolve(myData);
           });
 
           return defer.promise;
+        },
+
+        addFakeIcons(data) {
+          var icontypes = ['visiocall', 'computer', 'duration', 'octopus', 'capacity'];
+          var icons = {
+            target: []
+          };
+          var nbIcons = 0, icStart = 0;
+          angular.forEach(data, function(item) {
+            nbIcons = Math.floor(Math.random() * 4) + 1;
+            icStart = Math.floor(Math.random() * 4);
+            icons.target = icontypes.slice(icStart, nbIcons + icStart);
+            angular.extend(item, icons);
+          });
         },
 
         formatParms: function() {

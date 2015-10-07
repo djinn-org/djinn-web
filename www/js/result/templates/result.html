@@ -6,13 +6,13 @@
 
       <span>{{row.room.name}}</span>
 
-      <span>
+      <span class="result-accuracy">{{row.accuracy}} %</span>
+
+      <span class="result-icons">
         <i class="md-icon" ng-repeat="item in row.target">
           {{ result.icons[item] }}
         </i>
       </span>
-
-      <span>{{row.accuracy}} %</span>
 
     </article>
 
