@@ -43,7 +43,7 @@
           return defer.promise;
         },
 
-        addFakeIcons(data) {
+        addFakeIcons: function(data) {
           var icontypes = ['visiocall', 'computer', 'duration', 'octopus', 'capacity'];
           var icons = {
             target: []
