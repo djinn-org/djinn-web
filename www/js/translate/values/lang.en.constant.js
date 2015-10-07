@@ -19,7 +19,9 @@
       logout: 'Logout',
       date: 'Date',
       fromtime: 'Start',
-      bookit: 'Book it'
+      bookit: 'Book it',
+      floor:  'Floor',
+      building: 'building'
     });
 
 })();

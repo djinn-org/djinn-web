@@ -34,7 +34,13 @@
   }
   span {
     display: inline-block;
-    padding: 0.1em 0 0 1em;
-    vertical-align: top;
+    padding: 0.1em 0 0;
+    vertical-align: middle;
+    &:first-of-type {
+      padding: 0.1em 0 0 1em;
+    }
+  }
+  i {
+    vertical-align: middle;
   }
 }

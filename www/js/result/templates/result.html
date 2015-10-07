@@ -4,7 +4,7 @@
 
     <article class="result-line" ng-click="result.open($index)">
 
-      <span>{{row.title}}</span>
+      <span>{{row.room.name}}</span>
 
       <span>
         <i class="md-icon" ng-repeat="item in row.target">
@@ -12,15 +12,28 @@
         </i>
       </span>
 
-      <span>{{row.value}} %</span>
+      <span>{{row.accuracy}} %</span>
 
     </article>
 
     <aside class="result-view" ng-if="row.opened">
 
-      <div ng-repeat="(key, value) in row.detail">
+      <!--div ng-repeat="(key, value) in row.detail">
         <i class="md-icon">{{key}}</i>
         <span>{{value}}</span>
+      </div-->
+
+      <div>
+        <i class="md-icon">my_location</i>
+        <span ng-bind-html="'floor' | translate"></span>
+        <span>{{row.room.floor}},</span>
+        <span ng-bind-html="'building' | translate"></span>
+        <span>{{row.room.building}}</span>
+      </div>
+
+      <div>
+        <i class="md-icon">people</i>
+        <span>{{row.room.capacity}}</span>
       </div>
 
       <footer>

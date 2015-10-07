@@ -19,7 +19,9 @@
       logout: 'Déconnexion',
       date: 'Date',
       fromtime: 'Début',
-      bookit: 'Réserver'
+      bookit: 'Réserver',
+      floor:  'Etage',
+      building: 'bâtiment'
     });
 
 })();

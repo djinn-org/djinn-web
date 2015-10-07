@@ -3,8 +3,8 @@
 (function() {
 
   angular.module('djinnApp')
-    .factory('ResultFactory', ['$http', '$q',
-    function($http, $q) {
+    .factory('ResultFactory', ['$http', '$q', '$filter',
+    function($http, $q, $filter) {
 
       var currentSearch = {};
 
@@ -21,12 +21,12 @@
 
           $http({
             method:   'GET',
-            //url:      'js/mocks/result.json',
             url:      '/api/v1/find/rooms/' + parms
           }).success(function(data) {
 
-            defer.resolve(data.rows);
-
+            // sort data by accuracy descending
+            var myData = $filter('orderBy')(data, 'accuracy', true);
+            defer.resolve(myData);
           });
 
           return defer.promise;
@@ -71,11 +71,12 @@
 
           });
 
+          // format start date
           searchParms += 'start=' + res.formatDate(myStartDate, myStartTime) + '&';
 
-          if (stuff.length) {
-            searchParms += 'equipment=' + res.formatStuff(stuff) + '&';
-          }
+          // format equipment list
+          searchParms += stuff.length ? 'equipment=' +
+                            res.formatStuff(stuff) + '&': '';
 
           return searchParms;
         },
@@ -93,9 +94,7 @@
           var list = '';
           angular.forEach(stuff, function(item, ix) {
             list += item;
-            if (stuff.length - 1 !== ix) {
-              list += ',';
-            }
+            list += (stuff.length - 1 !== ix) ? ',': '';
           });
           return list;
         }

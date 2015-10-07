@@ -55,7 +55,7 @@ button {
 .block {
   background: $black-thin;
   border-bottom: 2px solid $black-light;
-  padding: 0.5em 0.5em 0.2em 0.5em;
+  padding: 0.5em 0.5em 0.5em 1em;
 }
 
 .choicebox {
@@ -70,9 +70,9 @@ button {
   @extend .clearfix;
   @extend .block;
   margin: 0 0 1em;
+  padding-bottom: 0.3em;
 
-  >i {
-    line-height: 0.9em;
+  > i {
     font-size: 2.5em;
   }
   span {
